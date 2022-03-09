@@ -35,4 +35,8 @@ cd donut_animation
 
 > or
 
-<code>gcc donat.c -o animasi.o -lm</code>
+<code>gcc donat.c -o animasi.o -lm; clear;./animasi.o</code>
+
+## result
+![res](https://github.com/Bayu12345677/donut_animation/blob/master/img/Screenshot_20220309-162755.png)
+
