@@ -28,7 +28,7 @@ class app
 }; class.new: app app_run
 
 def: validations(){
-	if [[ ! -f "$1" ]]; then
+	if [[ -f "$1" ]]; then
 		println_info " file $1 already there please use another name"; exit 2
 	fi
 }
