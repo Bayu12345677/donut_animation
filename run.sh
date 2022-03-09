@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # plugins bash moderen
 . lib/moduler.sh
@@ -22,7 +22,8 @@ class app
 	};
 
 	def: app::compile(){
-		gcc donat.c -o $1 -lm
+		gcc donat.c -o "$@" -lm
+                eval "./$@"
 	}
 }; class.new: app app_run
 
@@ -45,7 +46,7 @@ Namespace: run.sh
 				read -p "Output name : " output
 
 				var get_input : "${output:-animasi.o}"
-				validations "$get_input";app_run.compile "$get_output"
+				validations "$get_input";app_run.compile "$get_input"
 			}; ;;
 			(*) {
 			 	exit
